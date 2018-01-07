@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/orange"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill_horizontal"
+            android:id="@+id/linearLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="30sp"
+                android:text="@string/awayTeam"
+                android:id="@+id/awayTeam"
+                android:gravity="start"
+                android:clickable="true"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/awayEdit"
+                android:textSize="17sp"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/saveGame"
+                android:visibility="invisible"
+                android:id="@+id/saveAway" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="fill_horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/saveGame"
+                    android:gravity="start"
+                    android:id="@+id/saveHome"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/homeEdit"
+                    android:gravity="right"
+                    android:textSize="17sp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30sp"
+                    android:text="@string/homeTeam"
+                    android:gravity="end"
+                    android:id="@+id/homeTeam"
+                    android:clickable="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill_horizontal"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:gravity="start"
+                android:text="@string/zero"
+                android:textSize="30sp"
+                android:id="@+id/awayTeamScore" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:gravity="end"
+                android:text="@string/zero"
+                android:textSize="30sp"
+                android:id="@+id/homeTeamScore" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill_horizontal"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/plusThree"
+                    android:id="@+id/awayTeamPlusThree" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minusThree"
+                    android:id="@+id/awayTeamMinusThree"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/awayTeamPlusThree"
+                    android:layout_toEndOf="@+id/awayTeamPlusThree"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginStart="36dp" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minusThree"
+                    android:id="@+id/homeTeamMinusThree"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/homeTeamPlusThree"
+                    android:layout_toStartOf="@+id/homeTeamPlusThree"
+                    android:layout_marginRight="33dp"
+                    android:layout_marginEnd="33dp" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plusThree"
+                    android:id="@+id/homeTeamPlusThree"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill_horizontal"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/plusTwo"
+                android:id="@+id/awayTeamPlusTwo" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/minusTwo"
+                android:id="@+id/awayTeamMinusTwo"
+                android:layout_marginLeft="35dp"
+                android:layout_marginStart="35dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/awayTeamPlusTwo"
+                android:layout_toEndOf="@+id/awayTeamPlusTwo" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/minusTwo"
+                android:id="@+id/homeTeamMinusTwo"
+                android:layout_marginRight="33dp"
+                android:layout_marginEnd="33dp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/homeTeamPlusTwo"
+                android:layout_toStartOf="@+id/homeTeamPlusTwo" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/plusTwo"
+                android:id="@+id/homeTeamPlusTwo"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill_horizontal"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/plusOne"
+                android:id="@+id/awayTeamPlusOne" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/minusOne"
+                android:id="@+id/awayTeamMinusOne"
+                android:layout_marginLeft="37dp"
+                android:layout_marginStart="37dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/awayTeamPlusOne"
+                android:layout_toEndOf="@+id/awayTeamPlusOne" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/minusOne"
+                android:id="@+id/homeTeamMinusOne"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="131dp"
+                android:layout_marginEnd="131dp" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/plusOne"
+                android:id="@+id/homeTeamPlusOne"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
